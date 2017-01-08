@@ -1,0 +1,31 @@
+<h2 class="page-header">Create New Need</h2>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+
+<form method="post" action="/needs/create">
+   <div class="form-group">
+    <label>Need Type</label>
+    <input type="text" class="form-control" placeholder="Need Type" name="needtype">
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" class="form-control" placeholder="Description" name="description">
+  </div>
+   <div class="form-group">
+    <label>Target Amount</label>
+    <input type="number" class="form-control" placeholder="Target Amount" name="targetamnt">
+  </div>
+  <div class="form-group">
+    <label>Current Amount</label>
+    <input type="number" class="form-control" placeholder="current Amount" name="currentamnt">
+  </div>
+  <div class="form-group">
+    <label>Status</label>
+    <input type="text" class="form-control" placeholder="Status" name="status">
+  </div>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

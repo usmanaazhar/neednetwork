@@ -1,0 +1,48 @@
+<h2 class="page-header">Needs Home</h2>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Need Type</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Traget Amount</th>
+        <th>Current Amount</th>
+        <th>Created By</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+{{#each needs}}
+<tr>
+<td>{{needtype}}</td>
+<td>{{description}}</td>
+<td>{{status}}</td>
+<td>{{targetamnt}}</td>
+<td>{{currentamnt}}</td>
+<td>{{createdBy}}</td>
+</tr>
+
+{{/each}}
+<tbody>
+</table>
+
+<p>This is a test page</p>
+<div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            {{#if user}}
+              
+              <li role="presentation"><a href="/needs/create">Create</a></li>
+            {{else}}
+              <li role="presentation"><a href="/users/login">Login</a></li>
+              <li role="presentation"><a href="/users/register">Register</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+        
+      </div>
